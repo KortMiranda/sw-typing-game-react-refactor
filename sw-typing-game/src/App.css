@@ -12,4 +12,197 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  text-align: center;
+  background-color:black;
+  background-image: url(resources/KeBY2b.gif);
+  color: #FFD60A;
+  font-family: arial, sans-serif;
+  border: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+h1{
+  font-family: 'Star Jedi', arial, sans-serif;
+  font-size: 2.10em;
+  padding: 10px;
+  
+}
+
+h2{
+  font-size: 2.5em
+}
+
+h4 {
+  font-size: 1.5em
+}
+
+.score{
+  font-family: 'Star Jedi', arial, sans-serif; 
+  font-size: 1.5em;
+  padding: 10px;
+
+}
+
+.directions{
+  font-size: 1.75em;
+}
+
+
+.arrows { 
+  border: solid 2px
+}
+
+.scene {
+  background-color: transparent;
+  width: 600px;
+  height: 350px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  border-radius: 2px;
+  perspective: 1000px;
+}
+
+.card{ 
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #FFD60A;
+  transition: transform 1s; 
+  transform-style: preserve-3d;
+}
+
+/* .card.is-flipped {
+  transform: rotateY(180deg);
+} */
+
+/* .card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+  backface-visibility: hidden;
+} */
+
+/* .card__face--front {
+  background-color: rgba(46, 46, 46, 0.85); 
+}
+
+.card__face--back{
+  background-color: rgba(46, 46, 46, 0.85);
+  /* to flip the card back to front */
+  /* transform: rotateY(180deg); */
+/* } */ 
+
+
+.charFront {
+  padding-top: 65px;
+}
+
+.charBack {
+  padding-top: 30px;
+}
+
+
+.genButton,
+#submitButton,
+.modal-button
+{
+  font-family: 'Star Jedi', arial, sans-serif;
+  font-size: 1.25em;
+  color: #FFD60A;
+  background-color: #000814;
+  border: solid 2px #FFD60A;
+  padding: 10px;
+
+}
+
+.genButton,
+#submitButton,
+.modal-button:hover {
+  cursor: pointer;
+}
+
+.genButton:hover {
+  background-color: #1d2a3e;
+}
+
+#submitButton:hover {
+  background-color: #1d2a3e;
+}
+
+.modal-button:hover {
+  background-color: #1d2a3e;
+}
+
+#answerInput{
+  display: flex;
+  justify-content: center;
+}
+
+#inputBar {
+  height: 60px;
+  width: 300px;
+  margin: 10px;
+}
+
+.modal-correct,
+.modal-incorrect {
+  background-color: rgba(0, 0, 0, .4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+} 
+
+#modal-textbox-correct,
+#modal-textbox-incorrect{
+  background-color: rgba(82, 82, 82, .90);
+  height: 350px;
+  width: 550px;
+  border-radius: 5px;
+  margin: 150px auto;
+  border: solid 2px #FFD60A;
+  padding: 30px;
+  line-height: 120%;
+}
+
+#modal-incorrect img{
+  padding: 25px;
+}
+
+#modal-correct img {
+  width: 300px;
+  line-height: 75%;
+  padding: 30px;
+}
+
+.r2-d2{
+  width: 200px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 750px) {
+  .r2-d2 {
+      width: 150px;
+  }
+}
+
+
 

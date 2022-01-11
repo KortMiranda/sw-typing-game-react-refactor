@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
+import CorrectModal from './CorrectModal';
 
 function Card() {
     const [name, setName] = useState([])
@@ -24,14 +25,18 @@ function Card() {
     const handleSubmit = e => {
         e.preventDefault()
         if(input === name || input === name.toLowerCase() || input === name.toUpperCase()) {
-            console.log(true)
-            console.log(input)
+            <CorrectModal style={{display: 'block'}}/>
+            console.log(true)    
         } else {
             console.log(false)
-            console.log(input)
-            console.log(name)
         }
     }
+
+    // const openModal = () => {
+    //     if (handleSubmit() === true) {
+    //         <CorrectModal />
+    //     }
+    // }
     
     return (
         <div className='scene scene--card'>
