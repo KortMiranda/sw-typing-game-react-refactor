@@ -1,11 +1,13 @@
 
 import React, {useState, useEffect} from 'react';
 import CorrectModal from './CorrectModal';
+import IncorrectModal from './IncorrectModal';
 
 function Card() {
     const [name, setName] = useState([])
     const [input, setInput] = useState([])
     const [showCorrect, setShowCorrect] = useState(false)
+    const [showIncorrect, setShowIncorrect] = useState(false)
     
     useEffect(() => {
         async function getName() {
@@ -26,10 +28,10 @@ function Card() {
     const handleSubmit = e => {
         e.preventDefault()
         if(input === name || input === name.toLowerCase() || input === name.toUpperCase()) {
-           setShowCorrect(true)
-            
+            setShowCorrect(true)
             console.log(true)    
         } else {
+            setShowIncorrect(true)
             console.log(false)
         }
     }
@@ -49,6 +51,7 @@ function Card() {
                     </form>
                     
                     <CorrectModal onClose={() => setShowCorrect(false)} show={showCorrect}/>
+                    <IncorrectModal onClose={() => setShowIncorrect(false)} show={showIncorrect} />
                     
                 </div>
             </div>
