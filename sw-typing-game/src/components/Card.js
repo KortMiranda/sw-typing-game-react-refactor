@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 
-function Name(props) {
+function Card() {
     const [name, setName] = useState([])
     
     useEffect(() => {
@@ -21,8 +21,13 @@ function Name(props) {
     },[])
     
     return (
-        <div>{name}</div>
+        <div>
+            <h2>{name}</h2>
+            <h2>{name}</h2>
+            
+        </div>
+       
     )
 }
 
-export default Name;
+export default Card;
