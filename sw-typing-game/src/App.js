@@ -1,17 +1,26 @@
-import './App.css';
+
 import React, { useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-// import CardFront from './components/CardFront'
-// import CardBack from './components/CardBack'
+// import { BrowserRouter as Router } from 'react-router-dom';
+import "./App.scss";
 import Card from './components/Card'
-import CorrectModal from './components/CorrectModal'
+import Score from './components/Score';
 
 function App() {
-  
+
   return (
     <div className="App">
-        <Card />
-        
+        <div className='header'>
+        <h1>Reading / Typing Practice - Star Wars Edition </h1>
+        <Score />
+    </div>
+    <Card />
+    <div className="directions">
+      <h5>Directions:</h5>
+      <ol>
+        <li>Hover over card to flip</li>
+      </ol>
+      
+    </div>
     </div>
   );
 }
