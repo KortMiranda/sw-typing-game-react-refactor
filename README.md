@@ -1,1 +1,1 @@
-# sw-typing-game-react-refactor
+# Star Wars Typing Game With React
